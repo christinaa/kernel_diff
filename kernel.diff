@@ -15355,7 +15355,7 @@ diff -Naur ./kos//mm/mmap.c ./kern//mm/mmap.c
 +	vma->vm_file = NULL;
 +	fput(file);
 +
-+	/* Undo any partial mapping done by a device driver. */
++	/* Undo any partial mapping done by a device driver a. */
 +	unmap_region(mm, vma, prev, vma->vm_start, vma->vm_end);
 +	charged = 0;
 +free_vma:
